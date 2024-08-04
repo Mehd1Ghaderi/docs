@@ -33,7 +33,7 @@ provide('navigation', navigation)
 </script>
 
 <template>
-  <div>
+  <div dir="rtl">
     <NuxtLoadingIndicator />
 
     <AppHeader />
@@ -47,10 +47,7 @@ provide('navigation', navigation)
     <AppFooter />
 
     <ClientOnly>
-      <LazyUContentSearch
-        :files="files"
-        :navigation="navigation"
-      />
+      <LazyUContentSearch :files="files" :navigation="navigation" />
     </ClientOnly>
 
     <UNotifications />
